@@ -6,15 +6,19 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <div class="navbar-start">
+            <a href="/" class="btn btn-ghost text-xl"> MiniBlog</a>
+        </div>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
                 </div>
             </div>
 
@@ -50,6 +54,9 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
+                 <div class="navbar-end gap-2">
+            <a href="/articles/create" class="btn btn-primary btn-sm">Create Article</a>
+        </div>
             </div>
 
             <!-- Hamburger -->

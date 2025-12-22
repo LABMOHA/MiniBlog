@@ -18,6 +18,7 @@ class ArticleController extends Controller
 
         //$articles= Article::all();
         $articles = Article::with('user')
+        ->where('user_id', auth()->id())
             ->latest()
             ->take(50)
             ->get();
@@ -46,7 +47,7 @@ class ArticleController extends Controller
         ]);
 
         $article = new Article($validated);
-        $article->user_id = 3;
+        $article->user_id = auth()->id();
         $article->save();
         return redirect('/');
     }

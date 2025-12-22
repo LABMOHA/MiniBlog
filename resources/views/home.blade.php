@@ -9,14 +9,9 @@
 </head>
 <body class="min-h-screen flex flex-col bg-base-200 font-sans">
 
-    <nav class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
-        <div class="navbar-start">
-            <a href="/" class="btn btn-ghost text-xl">📝 MiniBlog</a>
-        </div>
-        <div class="navbar-end gap-2">
-            <a href="/articles/create" class="btn btn-primary btn-sm">Create Article</a>
-        </div>
-    </nav>
+   
+    <x-app-layout>
+
 
     <main class="flex-1 container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-6 text-center">Latest Posts</h1>
@@ -66,6 +61,7 @@
             
         </div>
     </footer>
+</x-app-layout>
 
 </body>
 </html>

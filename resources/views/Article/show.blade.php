@@ -31,7 +31,7 @@
                                     <span>{{ substr($article->user->name ?? 'A', 0, 1) }}</span>
                                 </div>
                             </div>
-                            <span class="font-semibold">{{ $article->user->name ?? 'Anonymous' }}</span>
+                            <span class="font-semibold">{{ $article->user->name }}</span>
                         </div>
                         <span>{{ $article->created_at->format('F d, Y') }}</span>
                     </div>
